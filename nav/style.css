@@ -5,10 +5,41 @@ h4,
 h5,
 h6 {
   font-family: "华文中宋", serif;
+  font-weight: bold;
 }
 body {
   max-width: 960px;
   margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  background-color: #ccc;
+  background-image: url("https://www.xbmu.edu.cn/images/dbxx.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  line-height: 2;
+}
+h2 {
+  background: linear-gradient(
+    to bottom,
+    #f6f8f9 0%,
+    #e5ebee 50%,
+    #d7dee3 51%,
+    #f5f7f9 100%
+  );
+  line-height: 2;
+  width: fit-content;
+  border: 1px red solid;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  padding-left: 2em;
+}
+div p {
+  font-size: 16px;
+  line-height: 1.8;
+  text-indent: 2em;
+  color: #7c5555;
 }
 .normal {
   line-height: 3;
@@ -19,7 +50,7 @@ body {
 }
 .underwave {
   color: #666;
-  text-decoration: wavy underline lime;
+  /* text-decoration: wavy underline lime; */
 }
 a:link {
   color: #000;
@@ -37,6 +68,21 @@ a:hover {
 
 h2::after {
   content: "🎶";
+  margin-left: 2em;
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+h2::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-image: url("https://www.xbmu.edu.cn/images/title_tp1.png");
+  background-repeat: no-repeat;
+  left: -1em;
 }
 
 footer p {
@@ -44,5 +90,9 @@ footer p {
 }
 footer p a {
   color: #666;
-  font-size: 12px;
+  font-size: 0.8em;
+}
+ul li {
+  display: inline-block;
+  width: 400px;
 }
