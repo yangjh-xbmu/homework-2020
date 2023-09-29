@@ -1,0 +1,11 @@
+body {
+  color: #001244;
+  max-width: 870px;
+  margin: 0 auto;
+}
+
+h2 {
+  border-left: 4px #722ed1 solid;
+  padding-left: 0.5em;
+  line-height: 2;
+}
