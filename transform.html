@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>变形练习</title>
+    <style>
+      .clearfix:before,
+      .clearfix:after {
+        display: table;
+        content: " ";
+      }
+
+      .clearfix:after {
+        clear: both;
+      }
+
+      body {
+        color: #fff;
+        margin: 12px 15px;
+      }
+
+      h1,
+      h2 {
+        color: #2db34a;
+      }
+
+      .original,
+      .box {
+        border-radius: 6px;
+      }
+
+      .original {
+        background: #eaeaed;
+        border: 1px dashed #cecfd5;
+        float: left;
+        margin: 12px 15px;
+      }
+
+      .box {
+        background: #2db34a;
+        height: 95px;
+        line-height: 95px;
+        text-align: center;
+        width: 95px;
+      }
+
+      .box-1 {
+        transform: rotate(20deg);
+      }
+
+      .box-2 {
+        transform: rotate(-55deg);
+      }
+
+      .box-3 {
+        transform: scale(0.5);
+      }
+
+      .box-4 {
+        transform: scale(0.5, 1.5);
+      }
+
+      .box-5 {
+        transform: translate(20px, 20%);
+      }
+
+      .box-6 {
+        transform: translate(-50%);
+      }
+
+      .box-7 {
+        transform: skew(15deg);
+      }
+
+      .box-8 {
+        transform: skewY(15deg);
+      }
+
+      .box-9 {
+        transform: skew(15deg, 15deg);
+      }
+
+      .box-10 {
+        transform: perspective(100px) rotateX(15deg);
+      }
+
+      .box-11 {
+        transform: perspective(1100px) rotateX(15deg);
+      }
+
+      .box-12 {
+        transform: perspective(100px) rotateX(45deg);
+      }
+
+      .box-13 {
+        transform: perspective(100px) rotateY(45deg);
+      }
+
+      .box-14 {
+        transform: perspective(100px) rotateZ(45deg);
+      }
+
+      .box-15 {
+        transform: perspective(100px) rotateY(180deg);
+      }
+
+      .box-16 {
+        transform: perspective(100px) rotateY(180deg);
+        backface-visibility: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>变形练习</h1>
+    <div class="clearfix">
+      <h2>旋转</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-1">Box 1</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-2">Box 2</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>缩放</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-3">Box 3</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-4">Box 4</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>位移</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-5">Box 5</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-6">Box 6</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>倾斜</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-7">Box 7</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-8">Box 8</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-9">Box 9</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>透视</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-10">Box 10</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-11">Box 11</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>3D旋转</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-12">Box 12</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-13">Box 13</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-14">Box 14</figure>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <h2>背部可见性</h2>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-15">Box 15</figure>
+        </div>
+      </div>
+      <div class="original">
+        <div class="spin">
+          <figure class="box box-16">Box 16</figure>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
