@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS基础知识</title>
+  </head>
+  <body>
+    <script>
+      // 弹出窗口
+      //   alert("Hello, world!");
+      //   定义变量
+      let weather = "晴朗";
+      //   alert(weather);
+      //   定义常量
+      const myBirthday = "18.04.1982";
+      //   myBirthday = "01.01.2001"; // 错误，不能对常量重新赋值
+      //   定义数字类型的变量
+      let temp = 15;
+      //   alert("今天温度：" + temp);
+      //   反引号字符串实际上是一种模板
+      console.log(`今天温度：${temp}`);
+      //   布尔值
+      console.log(4 > 3);
+      console.log(typeof false);
+      //   字符串转为数字
+      let number = "123456";
+      console.log("number变量的类型为:" + typeof number);
+      console.log("number变量的类型为:" + typeof Number(number));
+      //   if分支
+      if (temp > 18) {
+        console.log("还不算太冷");
+      } else {
+        console.log("太冷了");
+      }
+      let i = 0;
+      while (i < 3) {
+        // 依次显示 0、1 和 2
+        console.log(i);
+        i++;
+      }
+      for (let i = 0; i < 3; i++) {
+        console.log(i); // 0, 1, 2
+      }
+      function p(message = "") {
+        console.log(message);
+      }
+      p(3);
+      p("hello");
+      function sayhello(name = "小明", message = "你好") {
+        console.log(`${name}, ${message}`);
+      }
+      sayhello();
+      sayhello("小丽");
+      sayhello("古丽", "你好，棒油");
+    </script>
+  </body>
+</html>
