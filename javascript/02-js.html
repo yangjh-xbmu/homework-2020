@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 语法基础2</title>
+  </head>
+  <body>
+    <script>
+      // 定义数据
+      let fruits = ["Apple", "Orange", "Plum"];
+      console.log(fruits[0]);
+      //   循环数组元素
+      for (let fruit of fruits) {
+        console.log(fruit);
+      }
+      let user = {
+        // 一个对象
+        name: "John", // 键 "name"，值 "John"
+        age: 30, // 键 "age"，值 30
+      };
+      console.log(user.name, user.age);
+      for (let key in user) {
+        // keys
+        console.log(key); // name, age, isAdmin
+        // 属性键的值
+        console.log(user[key]); // John, 30, true
+      }
+    </script>
+  </body>
+</html>

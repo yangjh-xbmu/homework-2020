@@ -1,0 +1,62 @@
+{
+    "storymap": {
+        "call_to_action": true,
+        "call_to_action_text": "",
+        "map_as_image": false,
+        "map_type": "osm:standard",
+        "slides": [
+            {
+                "date": "",
+                "location": {
+                    "line": true
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "",
+                    "url": "https://p1.ssl.qhmsg.com/t01b407cbeb3c1c98da.jpg"
+                },
+                "text": {
+                    "headline": "作品封面",
+                    "text": "基于地图的交互叙事作品"
+                },
+                "type": "overview"
+            },
+            {
+                "date": "",
+                "location": {
+                    "lat": 39.98054016455432,
+                    "line": true,
+                    "lon": 116.29165649414062,
+                    "zoom": 12
+                },
+                "media": {
+                    "caption": "",
+                    "credit": "",
+                    "url": "https://oss-yangjh.oss-cn-chengdu.aliyuncs.com/video/beach.mp4"
+                },
+                "text": {
+                    "headline": "事件一",
+                    "text": "说明文字"
+                }
+            },
+            {
+                "date": "",
+                "location": {
+                    "lat": 40.01499435375046,
+                    "line": true,
+                    "lon": 113.2855224609375,
+                    "zoom": 8
+                },
+                "media": {
+                    "caption": "图片说明",
+                    "credit": "",
+                    "url": "https://th.bing.com/th/id/OIP.-08hJKSITNSeZHEv7Pc3jQHaEK?pid=ImgDet&rs=1"
+                },
+                "text": {
+                    "headline": "事件二",
+                    "text": "事件说明"
+                }
+            }
+        ]
+    }
+}

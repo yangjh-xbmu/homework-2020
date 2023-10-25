@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>StoryMapJS Embed</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="StoryMapJS Embed" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="storymap.css" />
+    <script type="text/javascript" src="storymap.js"></script>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="storymap-embed"></div>
+
+    <script>
+      var storymap;
+      const urlParams = new URLSearchParams(window.location.search);
+
+      function onStoryMapTitle(e) {
+        document.title = "StoryMapJS: " + e.title;
+      }
+
+      function getScriptPath(scriptname) {
+        let scriptTags = document.getElementsByTagName("script");
+        for (const [i, tag] of Object.entries(scriptTags)) {
+          if (tag.src.match(scriptname)) {
+            let path = tag.src.split("?")[0].split("/").slice(0, -1).join("/");
+            return path;
+          }
+        }
+        return "";
+      }
+
+      function getStartSlide() {
+        var slide = 0;
+        if (urlParams.has("start_at_slide")) {
+          slide = parseInt(urlParams.get("start_at_slide"), 10);
+        }
+        return slide;
+      }
+
+      function urlJoin(url, concat) {
+        // see http://stackoverflow.com/questions/2676178/joining-relative-urls
+        function build(parts, container) {
+          for (var i = 0, l = parts.length; i < l; i++) {
+            if (parts[i] == "..") {
+              container.pop();
+            } else if (parts[i] == ".") {
+              continue;
+            } else {
+              container.push(parts[i]);
+            }
+          }
+        }
+        var url_parts = [];
+        build(url.split("/"), url_parts);
+        build(concat.split("/"), url_parts);
+        return url_parts.join("/");
+      }
+
+      function buildStoryMap(data) {
+        if (!data || !data.storymap) {
+          return;
+        }
+        var options = {
+          script_path: getScriptPath(/storymap(-min)?\.js/),
+          start_at_slide: getStartSlide(),
+        };
+        var font = "stock:default";
+        if (data.font_css) {
+          font = data.font_css;
+        }
+        if (font.indexOf("stock:") == 0) {
+          var font_name = font.split(":")[1];
+          var base_url = urlJoin(options.script_path, "../css/fonts");
+          font = urlJoin(base_url, "font." + font_name + ".css");
+        } else if (!font.match("^(http|https|//)")) {
+          font = urlJoin(options.script_path, font);
+        }
+        KLStoryMap.loadCSS(font, function () {
+          console.log("font loaded: " + font);
+        });
+        storymap = new KLStoryMap.StoryMap("storymap-embed", data, options, {
+          title: onStoryMapTitle,
+        });
+        var mapType = storymap.options.map_type;
+        if (mapType && mapType.match("^zoomify.*")) {
+          ga("send", "event", "StoryMapJS", "zoomify", document.referrer);
+        }
+      }
+
+      (function () {
+        let storymap_url = urlParams.get("url");
+        fetch(storymap_url)
+          .then((response) => response.json())
+          .then((data) => buildStoryMap(data));
+      })();
+
+      window.onresize = function (event) {
+        if (storymap) {
+          storymap.updateDisplay();
+        }
+      };
+    </script>
+  </body>
+</html>
