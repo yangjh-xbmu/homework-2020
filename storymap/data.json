@@ -3,17 +3,17 @@
         "call_to_action": true,
         "call_to_action_text": "",
         "map_as_image": false,
-        "map_type": "osm:standard",
+        "map_type": "stamen:toner-labels",
         "slides": [
             {
-                "date": "",
+                "date": "2023-10-20",
                 "location": {
                     "line": true
                 },
                 "media": {
                     "caption": "",
                     "credit": "",
-                    "url": "https://p1.ssl.qhmsg.com/t01b407cbeb3c1c98da.jpg"
+                    "url": "https://demo-fusion.oss-ap-southeast-1.aliyuncs.com/0f6fa5661b7d74a36e3168d34d6d168f.jpg"
                 },
                 "text": {
                     "headline": "作品封面",
@@ -22,12 +22,12 @@
                 "type": "overview"
             },
             {
-                "date": "",
+                "date": "2013-10-20",
                 "location": {
                     "lat": 39.98054016455432,
                     "line": true,
                     "lon": 116.29165649414062,
-                    "zoom": 12
+                    "zoom": 10
                 },
                 "media": {
                     "caption": "",
@@ -42,10 +42,10 @@
             {
                 "date": "",
                 "location": {
-                    "lat": 40.01499435375046,
+                    "lat": 35.934854145221465,
                     "line": true,
-                    "lon": 113.2855224609375,
-                    "zoom": 8
+                    "lon": 104.15738214466856,
+                    "zoom": 11
                 },
                 "media": {
                     "caption": "图片说明",
