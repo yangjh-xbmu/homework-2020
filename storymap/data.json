@@ -13,10 +13,10 @@
                 "media": {
                     "caption": "",
                     "credit": "",
-                    "url": "https://demo-fusion.oss-ap-southeast-1.aliyuncs.com/0f6fa5661b7d74a36e3168d34d6d168f.jpg"
+                    "url": "https://th.bing.com/th/id/R.42d76866574b35274ec7a0f33c6d268d?rik=2nxpdI5QcyC%2fSQ&pid=ImgRaw&r=0"
                 },
                 "text": {
-                    "headline": "作品封面",
+                    "headline": "苏轼和他的美食",
                     "text": "基于地图的交互叙事作品"
                 },
                 "type": "overview"
@@ -32,25 +32,25 @@
                 "media": {
                     "caption": "",
                     "credit": "",
-                    "url": "https://oss-yangjh.oss-cn-chengdu.aliyuncs.com/video/beach.mp4"
+                    "url": "https://bucketdemo2023.oss-ap-southeast-1.aliyuncs.com/01.mp4"
                 },
                 "text": {
-                    "headline": "事件一",
+                    "headline": "羊蝎子",
                     "text": "说明文字"
                 }
             },
             {
                 "date": "",
                 "location": {
-                    "lat": 35.934854145221465,
+                    "lat": 19.52,
                     "line": true,
-                    "lon": 104.15738214466856,
-                    "zoom": 11
+                    "lon": 109.58,
+                    "zoom": 8
                 },
                 "media": {
-                    "caption": "图片说明",
+                    "caption": "图片标题",
                     "credit": "",
-                    "url": "https://th.bing.com/th/id/OIP.-08hJKSITNSeZHEv7Pc3jQHaEK?pid=ImgDet&rs=1"
+                    "url": "https://bucketdemo2023.oss-ap-southeast-1.aliyuncs.com/OIP.jpg"
                 },
                 "text": {
                     "headline": "事件二",
